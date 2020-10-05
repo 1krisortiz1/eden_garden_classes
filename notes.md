@@ -10,4 +10,6 @@
 Classes
 - Event - know and store classes
 - CLI - User interface
-- Scraper - 
+- Scraper 
+
+

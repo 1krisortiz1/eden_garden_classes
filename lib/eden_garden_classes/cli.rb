@@ -9,14 +9,13 @@ class EdenGardenClasses::CLI
   end
 
   def get_categories
-    # to be scraped instead
-    @categories = ['Gardening', 'Communities', 'Green Living', 'Play and Create', 'Learn at Home']
+    @categories = EdenGardenClasses::Category.all
   end
 
   def list_categories
     # list categories
     puts "Choose a category to see classes."
-    @categories.each.with_index(1) { | category, index| puts "#{index}. #{category}" }
+    @categories.each.with_index(1) { | category, index| puts "#{index}. #{category.name}" }
   end
 
   def get_user_category
