@@ -1,6 +1,6 @@
 class EdenGardenClasses::Category
   @@all = []
-  attr_accessor :name
+  attr_accessor :name 
 
   def initialize(name)
     @name = name
@@ -8,6 +8,7 @@ class EdenGardenClasses::Category
   end
 
   def self.all
+    EdenGardenClasses::Scraper.scrape_categories if @@all.empty?
     @@all
   end
 

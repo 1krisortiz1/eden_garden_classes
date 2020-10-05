@@ -8,7 +8,7 @@ class EdenGardenClasses::CLI
     # list_events
   end
 
-  def get_categories
+  def get_categories 
     @categories = EdenGardenClasses::Category.all
   end
 
@@ -29,7 +29,7 @@ class EdenGardenClasses::CLI
 
   def show_events_for(chosen_category)
     category = @categories[chosen_category - 1]
-    puts "Here are classes for #{category}"
+    puts "Here are classes for #{category.name}"
     # To implement
     # EdenGardenClasses::Event.all.each.with_index(1) do | event |
     #   puts event.name

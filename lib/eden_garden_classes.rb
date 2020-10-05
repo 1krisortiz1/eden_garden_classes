@@ -5,6 +5,7 @@ require_relative "./eden_garden_classes/scraper"
 
 require 'pry'
 require 'nokogiri'
+require 'open-uri'
 
 module EdenGardenClasses
   class Error < StandardError; end
